@@ -1,0 +1,27 @@
+# Core dependencies
+numpy>=1.22.0
+scipy>=1.8.0
+matplotlib>=3.5.0
+bitarray>=2.4.0
+crcmod>=1.7
+
+# Additional core dependencies
+cycler>=0.11.0
+fonttools>=4.38.0
+kiwisolver>=1.4.4
+packaging>=23.0
+Pillow>=9.4.0
+pyparsing>=3.0.9
+python-dateutil>=2.8.2
+six>=1.16.0
+
+# USRP B210 SDR support (RECOMMENDED - install via conda-forge)
+# conda install -c conda-forge uhd
+# Note: UHD is best installed via conda, not pip
+
+# BladeRF SDR support (legacy, Windows-compatible)
+bladerf
+
+# Testing dependencies
+hypothesis>=6.0.0
+pytest>=7.0.0

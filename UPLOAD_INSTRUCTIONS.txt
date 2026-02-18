@@ -1,0 +1,145 @@
+================================================================================
+  DRONESECURITY-B210 - GITHUB UPLOAD INSTRUCTIONS
+================================================================================
+
+Your repository is ready! Follow these steps to upload to GitHub.
+
+================================================================================
+STEP 1: CREATE GITHUB REPOSITORY
+================================================================================
+
+1. Go to: https://github.com/new
+
+2. Fill in:
+   Repository name: DroneSecurity-B210
+   Description: Windows port of DroneSecurity with USRP B210 support - DJI DroneID receiver (NDSS 2023)
+   Visibility: Public
+   
+3. DO NOT check:
+   - Add a README file
+   - Add .gitignore
+   - Choose a license
+   (We already have these!)
+
+4. Click "Create repository"
+
+================================================================================
+STEP 2: OPEN POWERSHELL IN THIS FOLDER
+================================================================================
+
+1. Open File Explorer
+2. Navigate to: D:\Drone Classifier\DroneSecurity-public_squash\for github
+3. Type "powershell" in the address bar
+4. Press Enter
+
+================================================================================
+STEP 3: INITIALIZE GIT AND PUSH
+================================================================================
+
+Copy and paste these commands one by one:
+
+# Initialize git
+git init
+
+# Add all files
+git add .
+
+# Create first commit
+git commit -m "Initial commit: Windows port with USRP B210 support"
+
+# Add remote (REPLACE 'Skeletoskull' with your GitHub username!)
+git remote add origin https://github.com/Skeletoskull/DroneSecurity-B210.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+================================================================================
+STEP 4: CONFIGURE REPOSITORY
+================================================================================
+
+1. Go to your repository page on GitHub
+
+2. Click "About" (gear icon) and add:
+   - Description: Windows port of DroneSecurity with USRP B210 support
+   - Website: https://www.ndss-symposium.org/ndss-paper/drone-security-and-the-mysterious-case-of-djis-droneid/
+   - Topics: sdr, usrp, b210, gnuradio, dji, droneid, drone-security, windows, signal-processing, ndss2023
+
+3. Enable GitHub Actions:
+   - Go to "Actions" tab
+   - Click "I understand my workflows, go ahead and enable them"
+
+================================================================================
+STEP 5: CREATE FIRST RELEASE
+================================================================================
+
+1. Go to "Releases" → "Create a new release"
+
+2. Fill in:
+   Tag: v2.0.0
+   Title: v2.0.0 - USRP B210 Windows Support
+   
+3. Description:
+   Major release adding full Windows support using USRP B210 via GNU Radio/radioconda.
+   
+   Features:
+   - USRP B210 support (Windows & Linux)
+   - GNU Radio/radioconda integration
+   - 2-3x faster detection vs BladeRF A4
+   - Comprehensive testing suite
+   - Complete Windows setup guide
+   
+   Based on original research by RUB-SysSec (NDSS 2023)
+
+4. Click "Publish release"
+
+================================================================================
+STEP 6: VERIFY EVERYTHING WORKS
+================================================================================
+
+1. Check that all files are visible on GitHub
+2. Check that README.md displays correctly
+3. Check that GitHub Actions ran successfully (green checkmark)
+4. Check that images display in README
+
+================================================================================
+OPTIONAL: ADD BADGES TO README
+================================================================================
+
+Edit README.md and add at the top (after title):
+
+[![Tests](https://github.com/Skeletoskull/DroneSecurity-B210/workflows/Tests/badge.svg)](https://github.com/Skeletoskull/DroneSecurity-B210/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+"Permission denied" error:
+- Use personal access token instead of password
+- Generate at: GitHub → Settings → Developer settings → Personal access tokens
+
+"Repository not found" error:
+- Check that you replaced 'Skeletoskull' with YOUR username
+- Check that repository name is exactly: DroneSecurity-B210
+
+"Large files" error:
+- The .gitignore should prevent this
+- If it happens, remove the file: git rm --cached filename
+
+================================================================================
+DONE!
+================================================================================
+
+Your repository is now live on GitHub!
+
+Share it:
+- Twitter/X with hashtags: #SDR #DJI #DroneID #NDSS2023
+- Reddit: r/RTLSDR, r/amateurradio
+- Hacker News
+- LinkedIn
+
+For detailed instructions, see: GITHUB_SETUP.md
+
+================================================================================
