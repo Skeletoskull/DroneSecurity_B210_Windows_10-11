@@ -137,13 +137,13 @@ DroneSecurity-B210/
 
 **No packets detected:**
 - Increase gain: `--gain 50` or `--gain 55`
-- Verify drone is flying (not just powered on)
+- Verify drone is powered on
 - Check antenna is connected to RX2 port
 - Use spectrum analyzer: `python src/spectrum_analyzer.py -f 2459.5 -g 50`
 
 **USB overflow warnings:**
 - Normal on Windows due to USB stack limitations
-- Reduce sample rate: `--sample_rate 15e6`
+- Reduce sample rate: `--sample_rate 25e6`
 - Use Linux for best performance (50 MHz stable)
 
 ## 📚 Documentation
@@ -199,4 +199,4 @@ This software is for **research and educational purposes only**. Users are respo
 
 ---
 
-**Status:** ✅ Tested on Windows 11 with USRP B210 via GNU Radio/radioconda
+**Status:** ✅ Tested on Windows 10 and 11 with USRP B210 via GNU Radio/radioconda
